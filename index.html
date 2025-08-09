@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafe Septian</title>
+  <style>
+    :root{--accent:#b5651d;--bg:#f7f5f2;--card:#ffffff;--muted:#6b6b6b}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:#222}
+    header{background:linear-gradient(180deg,rgba(0,0,0,0.25),rgba(0,0,0,0.05)), url('https://source.unsplash.com/1600x900/?coffee,cafe') center/cover no-repeat; color:white;padding:56px 16px}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.25)}
+    .logo img{width:100%;height:100%;object-fit:cover}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.5px}
+    nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
+
+    .hero{max-width:1100px;margin:28px auto 60px;display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
+    .hero-card{background:rgba(255,255,255,0.92);padding:28px;border-radius:14px;color:#111;box-shadow:0 8px 30px rgba(15,15,15,0.08)}
+    .hero-card h2{margin:0 0 10px}
+    .hero-card p{margin:0 0 16px;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+
+    .stats{display:flex;gap:18px;margin-top:18px}
+    .stat{background:linear-gradient(180deg,rgba(0,0,0,0.03),transparent);padding:12px;border-radius:10px;text-align:center;min-width:110px}
+    .stat b{display:block;font-size:20px}
+
+    main{max-width:1100px;margin:0 auto;padding:0 16px}
+    .section{margin:36px 0}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 8px 20px rgba(11,11,11,0.05)}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .card h3{margin:10px 0 6px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+
+    footer{max-width:1100px;margin:40px auto;color:var(--muted);padding:20px 16px}
+    .contact{display:flex;gap:18px;flex-wrap:wrap}
+
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}header{padding:36px 12px}}
+    @media(max-width:480px){.gallery{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo"><img src="foto3" alt="logo cafe"></div>
+        <div>
+          <h1>Cafe Septian</h1>
+          <div style="font-size:13px;opacity:0.95">Kopi. Suasana. Cerita.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div class="hero-card">
+        <h2>Selamat datang di <span style="color:var(--accent)">Cafe Septian</span></h2>
+        <p>Nikmati kopi spesial, aneka camilan, dan suasana nyaman untuk kerja atau berkumpul bersama teman. Buka setiap hari 08:00 - 02:00.</p>
+        <a class="btn" href="#menu">Lihat Menu</a>
+        <div class="stats">
+          <div class="stat"><b>150+</b><small>Minuman</small></div>
+          <div class="stat"><b>4.8</b><small>Rating</small></div>
+          <div class="stat"><b>10</b><small>Tahun</small></div>
+        </div>
+      </div>
+
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.18)">
+        <img src="foto2.jpg" alt="foto cafe" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="menu" class="section">
+      <h2>Menu Unggulan</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="foto4.jpg" alt="latte">
+          <h3>Latte</h3>
+          <p>Espresso lembut + susu steam, pilihan vanilla atau caramel.</p>
+        </article>
+        <article class="card">
+          <img src="foto5.jpg" alt="espresso">
+          <h3>Espresso Single Origin</h3>
+          <p>Biji pilihan, disangrai lokal. Aroma cokelat gelap dan kacang.</p>
+        </article>
+        <article class="card">
+          <img src="foto6.jpg" alt="kue">
+          <h3>Croissant Butter</h3>
+          <p>Renyah di luar, lembut di dalam — pasangan sempurna kopi Anda.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeri" class="section">
+      <h2>Galeri</h2>
+      <div class="gallery">
+        <img src="foto7.jpg" alt="interior cafe">
+        <img src="foto8.jpg" alt="biji kopi">
+        <img src="foto9.jpg" alt="barista">
+        <img src="foto10.jpg" alt="outdoor seating">
+        <img src="foto11.jpg" alt="dessert">
+        <img src="foto12.jpg" alt="pengunjung">
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <h2>Kontak & Lokasi</h2>
+      <div class="card contact">
+        <div style="flex:1;min-width:220px">
+          <h3>Alamat</h3>
+          <p>Perum Taman Raya Rajeg</p>
+          <h3>Telepon</h3>
+          <p>+62 858-8809-6249</p>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <h3>Jam Buka</h3>
+          <p>08:00 - 02:00 (Setiap hari)</p>
+          <h3>Email</h3>
+          <p>hello@cafeseptian.co.id</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>© Cafe Septian — All rights reserved</div>
+      <div>Follow us: Instagram • Facebook • TikTok:@caffe.septian.co</div>
+    </div>
+  </footer>
+</body>
+</html
